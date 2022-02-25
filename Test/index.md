@@ -46,17 +46,6 @@ Syntax highlighted code block
 | git status | List all new or modified files |
 | git diff | Show file differences that haven't been staged |
 
-<details><summary>CLICK ME</summary>
-<p>
-
-#### We can hide anything, even code!
-
-    ```ruby
-      puts "Hello World"
-    ```
-
-</p>
-</details>
 
 ```
 功能测试（） {
