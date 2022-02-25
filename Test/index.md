@@ -12,10 +12,10 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
-- **Bulleted**
+- Bulleted
 - List
 
-1. Numbered  '法沙发沙发' Asdgsdaf
+1. Numbered  
 2. List
 
 **Bold** and _Italic_ and `Code` text
