@@ -47,9 +47,4 @@ Syntax highlighted code block
 | git diff | Show file differences that haven't been staged |
 
 
-```
-功能测试（） {
-  console.log("注意这个函数前面的空行吗？");
-}
-```
 
