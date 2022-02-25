@@ -8,7 +8,7 @@
 ```markdown
 Syntax highlighted code block
 
-# Header 122gdfg 
+# Header 122gdfgQ 
 ## Header 2
 ### Header 3
 
@@ -24,13 +24,3 @@ Syntax highlighted code block
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ![This is an image](abc.png)
-
-- aaa
-- bbbb
-- ccc
-
-1. AAA
-   - aaa
-     - bbb 
-
-
