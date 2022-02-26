@@ -10,7 +10,7 @@
 
 ## 2.coding相关
 
-- 项目coding地址 [url](https://e.coding.net/icubespace/jiangsuchengxiang/JSCX.git)
+- 项目coding地址 [url:https://e.coding.net/icubespace/jiangsuchengxiang/JSCX.git](https://e.coding.net/icubespace/jiangsuchengxiang/JSCX.git)
 - 项目相关需求文档地址 [url](https://icubespace.coding.net/p/jiangsuchengxiang/wiki/447)
 - develop 为最新分支
   
