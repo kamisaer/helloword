@@ -25,22 +25,16 @@ public static IMThread Thread { get; private set; }
 
 ### EHFW0.3.0
 ```
-    公司内部框架 集成了
-
+    公司内部框架 集成了一些常用方法,需要同时导入 **Newtonsoft.Json.12.0.1** 和 **Demigiant** 插件，且安装 **Addressables** 寻址
 ```
-<details>
-<summary><color='#c7254e'>API</summary>
-<pre><code>
+```csharp
+> 部分调用举例
+  - 加载UI并显示 FW.UI.Load<XXXUI>().Show();
+  - 加载资源 FW.Asset.Load<GameObject>("Assets/a.prefab",(e)=> { });
+  - ...
+```
+接口调用示例 ![FW](FW.cs)
 
-
-public static IMThread Thread { get; private set; }
-
-public static IMThread Thread { get; private set; }
-
-
-
-</code></pre>
-</details>
 
 ### Newtonsoft.Json.12.0.1
 ```
