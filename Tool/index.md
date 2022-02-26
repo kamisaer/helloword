@@ -29,7 +29,7 @@ public static IMThread Thread { get; private set; }
 
 ```
 <details>
-<summary>API</summary>
+<summary><font color='#c7254e'>API</summary>
 <pre><code>
 
 
