@@ -19,16 +19,14 @@
 
 
 ======================================================================================
-```csharp
-public static IMThread Thread { get; private set; }
-```
+
 
 ### EHFW0.3.0
-```
-    > 公司内部框架 集成了一些常用方法
-    > 需要同时导入 **Newtonsoft.Json.12.0.1** 和 **Demigiant** 插件
-    > 安装 **Addressables** 寻址
-```
+
+> 公司内部框架 集成了一些常用方法
+> 需要同时导入 **Newtonsoft.Json.12.0.1** 和 **Demigiant** 插件
+> 安装 **Addressables** 寻址
+
 ```csharp
 > 部分调用举例
   - 加载UI并显示 
@@ -37,51 +35,59 @@ public static IMThread Thread { get; private set; }
     - FW.Asset.Load<GameObject>("Assets/a.prefab",(e)=> { });
   
 ```
-接口调用示例 [FW](FW.cs)
+ [接口调用示例](FW.cs)
 
 
 ### Newtonsoft.Json.12.0.1
-```
+> json序列化和反序列化
+
+```csharp
+                try
+                {
+                    list = JsonConvert.DeserializeObject<List<GroupData>>(text.text);
+
+                }
+                catch (Exception e)
+                {
+                    FW.Log.Error($"Deserialize To List<GroupData> Error, Msg :{e.Message}");
+                    return;
+                }
 ```
 
 ### Demigiant
-```
-```
+> 动画插件 用于摄像机的位移等移动 旋转等动作
 
 ### HighlightPlus
-```
-```
+> 3D物体高亮
 
 
 
 
 ### Vectrosity
-```
-```
+> 用于设备接线模块 2d接线
+> 贝塞尔曲线
 
 ### Minikits
-```
-```
+> 轻量型3D具有物理属性的绳索 [商店地址](https://assetstore.unity.com/packages/tools/physics/rope-minikit-154662)
+> unity Project Setting Api等级需要设置.NET 4.X
+> Package安装Burst
 
 ### AVProVideo
-```
-```
+>视频播放
 
 ### NatCorder
-```
-```
+>运行时录屏
 
 ### Paroxe
-```
-```
+> PDF
 
 ### RuntimeSceneGizmo
-```
-```
+>运行时UI小组件，单击b不同轴向可触发事件
+![RuntimeSceneGizmo](图1.png)
 
 ### VolumetricLightBeam
-```
-```
+>体积光
+>用于模拟灯光照射
 
 ## 1.内部工具
 
