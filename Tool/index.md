@@ -30,7 +30,7 @@ public static IMThread Thread { get; private set; }
 
 ```
 <details><summary>API</summary>
-<<code>
+<code>
 #### We can hide anything, even code!
 
 ```csharp
