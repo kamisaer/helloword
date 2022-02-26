@@ -3,7 +3,6 @@
 //=======================链接===================================================================//
 [TEST Pages](https://kamisaer.github.io/helloword/Test/)
 
-<font color=#00ffff size=72>color=#00ffff</font>
 //=======================代码块===================================================================//
 ```markdown
 Syntax highlighted code block

@@ -29,14 +29,17 @@ public static IMThread Thread { get; private set; }
     公司内部框架 集成了
 
 ```
-<details><summary>API</summary>
+<details>
+<summary>API</summary>
 <pre><code>
 #### 内部模块
 
 ```csharp
 public static IMThread Thread { get; private set; }
-```
 
+public static IMThread Thread { get; private set; }
+
+```
 
 </code></pre>
 </details>
