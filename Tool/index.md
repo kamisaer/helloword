@@ -20,9 +20,9 @@
 
 ======================================================================================
 ```csharp
-
 public static IMThread Thread { get; private set; }
 ```
+
 ### EHFW0.3.0
 ```
     公司内部框架 集成了
@@ -32,12 +32,12 @@ public static IMThread Thread { get; private set; }
 <summary>API</summary>
 <pre><code>
 
-```csharp
-public static IMThread Thread { get; private set; }
 
 public static IMThread Thread { get; private set; }
 
-```
+public static IMThread Thread { get; private set; }
+
+
 
 </code></pre>
 </details>
