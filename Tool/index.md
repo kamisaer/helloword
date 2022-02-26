@@ -38,9 +38,6 @@ public static IMThread Thread { get; private set; }
 public static IMThread Thread { get; private set; }
 ```
 
-```csharp
-public static IMAsset Asset { get; private set; }
-```
 
 </p>
 </details>
