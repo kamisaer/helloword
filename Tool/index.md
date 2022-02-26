@@ -24,7 +24,7 @@
 ### EHFW0.3.0
 ```
     公司内部框架 集成了
-    ```ruby
+    ```csharp
         /// <summary>
         ///     多线程模块
         /// </summary>
