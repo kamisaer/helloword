@@ -30,17 +30,15 @@ public static IMThread Thread { get; private set; }
 
 ```
 <details><summary>API</summary>
-
-#### We can hide anything, even code!
+<pre><code>
+#### 内部模块
 
 ```csharp
 public static IMThread Thread { get; private set; }
 ```
 
-```csharp
-public static IMAsset Asset { get; private set; }
-```
 
+</code></pre>
 </details>
 
 ### Newtonsoft.Json.12.0.1
