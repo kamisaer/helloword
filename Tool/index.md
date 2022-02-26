@@ -20,16 +20,14 @@
 
 
 ======================================================================================
+```csharp
 
+public static IMThread Thread { get; private set; }
+```
 ### EHFW0.3.0
 ```
     公司内部框架 集成了
-    ```csharp
-        /// <summary>
-        ///     多线程模块
-        /// </summary>
-        public static IMThread Thread { get; private set; }
-    ```
+
 ```
 
 ### Newtonsoft.Json.12.0.1
