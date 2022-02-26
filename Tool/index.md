@@ -17,14 +17,6 @@
 > ### [11. VolumetricLightBeam](#volumetriclightbeam)
 
 
-region i { 嵌入标题
-#一级标题
-##二级标题
-###三级标题
-####四级标题
-#####五级标题
-######六级标题
-} region 
 
 ======================================================================================
 ```csharp
@@ -39,7 +31,6 @@ public static IMThread Thread { get; private set; }
 <details>
 <summary>API</summary>
 <pre><code>
-#### 内部模块
 
 ```csharp
 public static IMThread Thread { get; private set; }
