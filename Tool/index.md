@@ -29,6 +29,21 @@ public static IMThread Thread { get; private set; }
     公司内部框架 集成了
 
 ```
+<details><summary>API</summary>
+<p>
+
+#### We can hide anything, even code!
+
+```csharp
+public static IMThread Thread { get; private set; }
+```
+
+```csharp
+public static IMAsset Asset { get; private set; }
+```
+
+</p>
+</details>
 
 ### Newtonsoft.Json.12.0.1
 ```
