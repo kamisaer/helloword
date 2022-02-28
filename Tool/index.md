@@ -81,8 +81,8 @@
 > PDF  
 
 #### RuntimeSceneGizmo
->运行时UI小组件，单击b不同轴向可触发事件  
->![RuntimeSceneGizmo](图1.png)
+>运行时UI小组件，单击不同轴向可触发事件  
+
 
 #### VolumetricLightBeam
 >体积光  
@@ -120,7 +120,22 @@
   - 自动获取UI组件和绑定按钮事件
 
 #### 编辑器工具WebGLSetting
+>[MenuItem("WebGLSetting/FontsToMainFont")]
+ - 替换UI上默认的字体
 
+>[MenuItem("WebGLSetting/ImportSetting/SetTextureSize（选中Assets下Texture父级文件夹/512X512")]
+ - 批量设置Texture分辨率
 
+>[MenuItem("WebGLSetting/ImportSetting/SetModelsDragParams")]
+ - 批量设置模型预制体（统一结构和添加碰撞器和便签，便于代码直接调用）
 
+>[MenuItem("WebGLSetting/BuildWebGL")]
+ - 打包webgl（打包流程-资源构建--App构建--到指定路径）
+
+>[MenuItem("WebGLSetting/RunWebGLServerCmd")]
+ - 运行本地服务器
+ - 目前使用nodejs作为服务器启动，需要安装nodejs
+  
+>  [MenuItem("WebGLSetting/PrintWebUrl")]
+ - 输出本地服务器的url 
 
