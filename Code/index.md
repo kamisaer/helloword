@@ -1,7 +1,7 @@
 # 程序篇
 
 > ## [1.程序启动](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [2.配置表加载和读取](https://kamisaer.github.io/helloword/Code/Execute/)
+> ## [2.配置表加载和读取](https://kamisaer.github.io/helloword/Code/Config/)
 > ## [3.设备资源库](https://kamisaer.github.io/helloword/Code/Execute/)
 > ## [4.绘图模块](https://kamisaer.github.io/helloword/Code/Execute/)
 > ## [5.线缆绘制](https://kamisaer.github.io/helloword/Code/Execute/)

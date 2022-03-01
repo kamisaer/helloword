@@ -1,12 +1,17 @@
-# 程序篇
+# 配置表加载和读取
 
-> ## [1.程序启动](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [2.配置表加载和读取](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [3.设备资源库](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [4.设备资源库创建](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [5.绘图模块](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [6.线缆绘制](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [7.设备仿真](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [8.设备端子接线](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [9.保存系统](https://kamisaer.github.io/helloword/Code/Execute/)
-> ## [10.新手引导](https://kamisaer.github.io/helloword/Code/Execute/)
+> ## [1.配置表生成](#配置表加载和读取)
+
+
+### 1.配置表生成
+> 使用Excel存储静态数据  配置表存放路径 Assets同级 ExcelTables/
+> ExcelTables/Device  存放设备资源库数据
+  - GroupData.xlsx 所有设备数据
+  - DeviceClassification.xlsx 设备的类型分配
+
+#### GroupData.xlsx结构
+| DeviceId  | cDeviceName |
+| 设备编号  |  设备名称  |
+| ------------- | ------------- |
+| 1004  | Content Cell  |
+| 1005  | Content Cell  |
