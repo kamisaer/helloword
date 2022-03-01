@@ -1,15 +1,16 @@
 # 程序启动
 
 > ## [1.程序启动](#1程序启动)
-> ## [2.配置表加载和读取]
-> ## [3.设备资源库]
-> ## [3.设备资源库创建]
-> ## [4.绘图模块]
-> ## [5.线缆绘制]
-> ## [6.设备仿真]
-> ## [7.设备端子接线]
-> ## [8.保存系统]
-> ## [9.新手引导]
+> ## [2.内部模块](#1程序启动)
+> ## [3.配置表加载和读取]
+> ## [4.设备资源库]
+> ## [5.设备资源库创建]
+> ## [6.绘图模块]
+> ## [7.线缆绘制]
+> ## [8.设备仿真]
+> ## [9.设备端子接线]
+> ## [10.保存系统]
+> ## [11.新手引导]
 
 ## 1.程序启动
 
@@ -87,3 +88,24 @@ public void OnStart() {
     MainProcess.Instance.OnInitialize();
 }
 ```
+
+
+## 2.内部模块
+
+### UI系统
+> ui模块:UGUI  
+> EH框架内置
+> 继承UIBase
+> ui和代码分离,通过反射动态绑定ui
+```csharp
+var types = Assembly.GetExecutingAssembly().GetTypes();
+foreach (var item in types)
+{
+    if (item.Namespace == Constant.FWNamespace.ViewNamespace && item.GetInterface(nameof(IUI)) != null)
+    {
+        FW.UI.BindUI(item, PathUtil.GetViewPath(item.Name));
+    }
+}
+```
+> [创建UI预制体和代码模板快捷工具](https://kamisaer.github.io/helloword/Tool/#2内部工具/#编辑器工具uigenarator)
+
