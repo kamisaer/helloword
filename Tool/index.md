@@ -91,16 +91,9 @@
 ## 1.内部工具
 
 > #### [1. excel2json](#excel2json)  
-> #### [2. 编辑器工具UIGenarator](#编辑器工具uigenarator)  
-> #### [3. 编辑器工具WebGLSetting](#编辑器工具webglsetting)
-> #### [4. HighlightPlus](#highlightplus)  
-> #### [5. Vectrosity](#highlightplus)
-> #### [6. Minikits](#highlightplus)
-> #### [7. AVProVideo](#highlightplus)
-> #### [8. NatCorder](#highlightplus)
-> #### [9. Paroxe](#highlightplus)
-> #### [10. RuntimeSceneGizmo](#highlightplus)
-> #### [11. VolumetricLightBeam](#highlightplus)
+> #### [2. 编辑器UIGenarator](#编辑器工具uigenarator)  
+> #### [3. 编辑器WebGLSetting](#编辑器工具webglsetting)
+
 
 
 
@@ -136,6 +129,9 @@
  - 运行本地服务器
  - 目前使用nodejs作为服务器启动，需要安装nodejs
   
->  [MenuItem("WebGLSetting/PrintWebUrl")]
+>[MenuItem("WebGLSetting/PrintWebUrl")]
  - 输出本地服务器的url 
+  
+>  [MenuItem("CubeSpace/GuideScriptsGenarator/创建新手引导步骤(已经存在的不做处理)")]
+ - 为每个引导步骤创建一个脚本文件
 
