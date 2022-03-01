@@ -2,15 +2,7 @@
 
 > ## [1.程序启动](#1程序启动)
 > ## [2.内部模块](#2内部模块)
-> ## [3.配置表加载和读取]
-> ## [4.设备资源库]
-> ## [5.设备资源库创建]
-> ## [6.绘图模块]
-> ## [7.线缆绘制]
-> ## [8.设备仿真]
-> ## [9.设备端子接线]
-> ## [10.保存系统]
-> ## [11.新手引导]
+
 
 ## 1.程序启动
 
@@ -95,7 +87,7 @@ public void OnStart() {
 ### UI系统
 > ui模块:UGUI  
 > EH框架内置
-> 继承UIBase
+> 继承 UIBase
 > ui和代码分离,通过反射动态绑定ui
 ```csharp
 var types = Assembly.GetExecutingAssembly().GetTypes();
@@ -107,5 +99,149 @@ foreach (var item in types)
     }
 }
 ```
-> [创建UI预制体和代码模板快捷工具](https://kamisaer.github.io/helloword/Tool/#2内部工具/#编辑器工具uigenarator)
+ [创建UI预制体和代码模板快捷工具 编辑器工具uigenarator](https://kamisaer.github.io/helloword/Tool/#编辑器工具uigenarator)
 
+### 状态机
+> EH框架内置
+>状态继承接口 IState
+>反射加载每个状态，使用FW.Fsm进行状态切换
+>部分接口方法
+```csharp
+public interface IFsm{
+T ChangeState<T>(bool forcibly = false) where T : IState;
+T GetState<T>() where T : IState;
+T RegisterState<T>() where T : IState, new();
+T RemoveState<T>() where T : IState;
+}
+```
+
+### 消息派发和事件
+> EH框架内置
+> FW.Notice调用
+> 接口方法
+```csharp
+ public interface IMNotice
+ {
+  void BindNotice(string name, Action<object> action);
+  void ClearNotice();
+  void DispatchNotice(string name, object data = null);
+  void UnbindNotice(string name, Action<object> action);
+}
+```
+>事件的监听与注销  
+>FW.Event调用
+
+```csharp
+ public interface IMEvent
+ {
+     //
+     // 摘要:
+     //     绑定事件
+     //
+     // 参数:
+     //   name:
+     //     名称
+     //
+     //   condition:
+     //     触发条件
+     //
+     //   action:
+     //     触发回调
+     //
+     //   priority:
+     //     优先级
+     void BindEvent(string name, Func<bool> condition, Action action, int priority = 0);
+     //
+     // 摘要:
+     //     绑定事件行为,不设置条件
+     //
+     // 参数:
+     //   name:
+     //
+     //   action:
+     //
+     //   priority:
+     void BindEvent(string name, Action action, int priority = 0);
+     //
+     // 摘要:
+     //     绑定事件,返回随机事件名
+     //
+     // 参数:
+     //   condition:
+     //
+     //   action:
+     //
+     //   priority:
+     string BindEvent(Func<bool> condition, Action action, int priority = 0);
+     //
+     // 摘要:
+     //     绑定一次性事件,触发后移除掉
+     //
+     // 参数:
+     //   condition:
+     //
+     //   action:
+     //
+     //   priority:
+     void BindOnce(Func<bool> condition, Action action = null, int priority = 0);
+     void ClearEvents();
+     //
+     // 摘要:
+     //     重设触发条件
+     //
+     // 参数:
+     //   name:
+     //
+     //   condition:
+     void SetCondition(string name, Func<bool> condition, int priority = 0);
+     //
+     // 摘要:
+     //     解绑事件
+     //
+     // 参数:
+     //   name:
+     void UnbindEvent(string name);
+ }
+```
+
+
+### HTTP
+>EH框架内置
+>FW.Http调用
+```csharp
+ //
+ // 摘要:
+ //     http请求模块
+ public interface IMHttp
+ {
+     void Delete(string uri, Action<byte[], IError> onResponse = null, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     void Get(string uri, Action<byte[], IError> onResponse, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     void Post(string uri, string data, Action<byte[], IError> onResponse = null, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     void Post(string uri, WWWForm form, Action<byte[], IError> onResponse = null, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     void Post(string uri, Dictionary<string, string> fields, Action<byte[], IError> onResponse = null, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     void Put(string uri, string data, Action<byte[], IError> onResponse = null, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     void Put(string uri, byte[] data, Action<byte[], IError> onResponse = null, Dictionary<string, string> header = null, Action<float> onProgress = null);
+     //
+     // 摘要:
+     //     设置默认请求头
+     //
+     // 参数:
+     //   header:
+     void SetHeader(Dictionary<string, string> header);
+ }
+```
+
+
+
+
+### ECS
+>EH内置
+>只是参考了ECS模式的实现，并未带给项目性能提升
+>暂弃
+
+
+
+### 自定义模块
+> 可以创建一个新的模块
+> 比如 FW.Register<IDataManager, DataManager>();
+> FW.Get<DataManager>() 调用
