@@ -9,15 +9,11 @@
   - GroupData.xlsx:  所有设备数据
   - DeviceClassification.xlsx: 设备的类型分配
 
-#### GroupData.xlsx结构
+> GroupData.xlsx结构
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-| a  | cDeviceName |
-| ------------- | ------------- |
-| 1004  | Content Cell  |
-| Content Cell  | Content Cell  |
+| DeviceId  | cDeviceName | Enable |
+| ------------- | ------------- | ------------- |
+| 设备编号  | 设备名称  | 主页是否显示  |
+| 1004  | 单元梯口机  | TRUE  |
+| 1005  | 管理中心  | TRUE  |
 
