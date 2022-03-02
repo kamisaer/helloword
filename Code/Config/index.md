@@ -22,14 +22,14 @@
 > cDeviceName **string**  设备中文名称
 > Enable **bool**  控制是否在设备库界面上显示
 > configName **string** 设备通用配置表名
-> 
-```markdown
-  *  为当前设备创建一个通用配置json文件，configName为json文件名称，通常命名规则是 $"Device{DeviceId}"
-  *  通过编辑器工具 [根据模板生成json文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成json文件) 生成一个通用配置json文件
-  *  通用配置模板项目路径 Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json
-  *  已经创建的同名文件不会被覆盖
-  
 
+*  为当前设备创建一个通用配置json文件，configName为json文件名称，通常命名规则是 $"Device{DeviceId}"
+*  通过编辑器工具 [根据模板生成json文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成json文件) 生成一个通用配置json文件
+*  通用配置模板项目路径 Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json
+*  已经创建的同名文件不会被覆盖
+
+>
+```json
   {
   "DeviceId": --DeviceId,
   "attachType":"Devices",
@@ -48,11 +48,11 @@
       "ECElement2dDrag","DeviceId--DeviceIdPort"
       ]
 }
-
+```
 -  "--"后跟字符串会被自动替换成设备id
 -  生成的json文件路径 Assets/ResourceLoad/Configs/Element/Device(设备id)/Device(设备id).json
 -  该json文件主要用于配置设备动态加载时候需要挂载的脚本名称，也可以手动修改脚步名称，在设备实例化时候会反射加载脚步
-```
+
 
 > installConfig **string** 设备安装配置表
   - 根据模板创建xlsx文件 模板路径 Assets/ResourcePersistant/ConfigTempalte/InstallTemp.json
