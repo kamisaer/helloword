@@ -1,16 +1,18 @@
 # 配置表加载和读取
 
-> ## [1.配置表生成](#配置表生成)
-    > ## [GroupData.xlsx结构](#groupdataxlsx结构)
-    > ## [DeviceClassification.xlsx结构](#deviceclassificationxlsx结构)
-    > ## [设备端子.xlsx文件结构](#portconfig-ustringu-设备安装配置表)
-    > ## [工具.xlsx文件结构](#portconfig-ustringu-设备安装配置表)
-    > ## [LineData.xlsx文件结构](#linedataxlsx文件结构)
-> ## sdfds
+> ## [1.配置表](#配置表)
+> ## [GroupData.xlsx结构](#groupdataxlsx结构)
+> ## [DeviceClassification.xlsx结构](#deviceclassificationxlsx结构)
+> ## [设备端子.xlsx文件结构](#portconfig-ustringu-设备安装配置表)
+> ## [工具.xlsx文件结构](#portconfig-ustringu-设备安装配置表)
+> ## [LineData.xlsx文件结构](#linedataxlsx文件结构)
+
+
+> ## [.xlsx文件转json](#linedataxlsx文件结构)
 
 
 
-## 1.配置表生成
+## 1.配置表
 > 使用Excel存储静态数据  配置表存放路径 Assets同级 ExcelTables/
 
 > ExcelTables/Device:  存放设备资源库数据
@@ -253,6 +255,7 @@ public enum DeviceTwoType
 
 -------------------------------
  | secondId  | firstId |
+  | ---  | --- |
  | 二级分类  | 一级分类 |
  | secondId  | firstId |
  | 1  | 1 |
@@ -263,6 +266,7 @@ public enum DeviceTwoType
 
  | Id  | configName | cName | type | icon | model | Visible |
  | 序号 | 配置表名称 | 名称 | 类型 | 图标 | 模型 | 是否可用 |
+  | --- | --- | --- | --- | --- | --- | --- |
   | 10008 | -- |卷尺 | 0 | JC | JuanChi | 模型 | TRUE |
 
 type :工具类型 
@@ -282,3 +286,68 @@ type :工具类型
 
 ## LineData.xlsx文件结构
 >参考 GroupData .xlsx结构
+
+## .xlsx文件转json
+
+> 使用工具[to json](https://kamisaer.github.io/helloword/Tool/#根据模板生成json文件)
+> 工具路径 Asset同级 excel2json
+> .bat命令
+
+
+<details><summary>excel2json2cs.bat</summary>
+<p>
+
+:excel表格路径
+@SET EXCEL_DEVICE_FOLDER=.\ExcelTables\Device
+@SET EXCEL_PORT_FOLDER=.\ExcelTables\Port
+@SET EXCEL_TOOL_FOLDER=.\ExcelTables\Tool
+@SET EXCEL_LINE_FOLDER=.\ExcelTables\Line
+@SET EXCEL_INSTALL_FOLDER=.\ExcelTables\Install
+
+
+:项目json路径
+@SET JSON_FOLDER=.\Assets\ResourceLoad\Configs
+@SET JSON_PORT_FOLDER=.\Assets\ResourceLoad\Configs\Port
+
+@SET JSON_TOOL_FOLDER=.\Assets\ResourceLoad\Configs\Tool
+@SET JSON_LINE_FOLDER=.\Assets\ResourceLoad\Configs\Line
+@SET JSON_INSTALL_FOLDER=.\Assets\ResourceLoad\Configs\Install
+
+
+@SET CS_FOLDER=.\Assets\App\Definition\Object
+@SET EXE=.\excel2json\excel2json.exe
+
+@ECHO Converting excel files in folder %EXCEL_DEVICE_FOLDER% ...
+for /f "delims=" %%i in ('dir /b /a-d /s %EXCEL_DEVICE_FOLDER%\*.xlsx') do (
+    @echo   processing %%~nxi 
+    @CALL %EXE% --excel %EXCEL_DEVICE_FOLDER%\%%~nxi --json %JSON_FOLDER%\%%~ni.json --csharp %CS_FOLDER%\%%~ni.cs --header 3 --a True
+)
+@ECHO Converting excel files in folder %EXCEL_TOOL_FOLDER% ...
+for /f "delims=" %%i in ('dir /b /a-d /s %EXCEL_TOOL_FOLDER%\*.xlsx') do (
+    @echo   processing %%~nxi 
+    @CALL %EXE% --excel %EXCEL_TOOL_FOLDER%\%%~nxi --json %JSON_FOLDER%\%%~ni.json --csharp %CS_FOLDER%\%%~ni.cs --header 3 --a True
+)
+
+@ECHO Converting excel files in folder %EXCEL_PORT_FOLDER% ...
+for /f "delims=" %%i in ('dir /b /a-d /s %EXCEL_PORT_FOLDER%\*.xlsx') do (
+    @echo   processing %%~nxi 
+    @CALL %EXE% --excel %EXCEL_PORT_FOLDER%\%%~nxi --json %JSON_PORT_FOLDER%\%%~ni.json  --header 3 --a True
+)
+
+@ECHO Converting excel files in folder %EXCEL_LINE_FOLDER% ...
+for /f "delims=" %%i in ('dir /b /a-d /s %EXCEL_LINE_FOLDER%\*.xlsx') do (
+    @echo   processing %%~nxi 
+    @CALL %EXE% --excel %EXCEL_LINE_FOLDER%\%%~nxi --json %JSON_LINE_FOLDER%\%%~ni.json --csharp %CS_FOLDER%\%%~ni.cs --header 3 --a True
+
+)
+
+@ECHO Converting excel files in folder %EXCEL_INSTALL_FOLDER% ...
+for /f "delims=" %%i in ('dir /b /a-d /s %EXCEL_INSTALL_FOLDER%\*.xlsx') do (
+    @echo   processing %%~nxi 
+    @CALL %EXE% --excel %EXCEL_INSTALL_FOLDER%\%%~nxi --json %JSON_INSTALL_FOLDER%\%%~ni.json  --header 3 --a True
+)
+pause
+
+</p>
+</details>
+
