@@ -29,7 +29,7 @@
   -  通用配置模板项目路径 Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json
   -  已经创建的同名文件不会被覆盖
   
-```json
+
   {
   "DeviceId": --DeviceId,
   "attachType":"Devices",
