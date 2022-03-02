@@ -14,11 +14,8 @@
 
 | DeviceId  | cDeviceName | Enable |configName |installConfig |logicConfig |portConfig |icon |legend |model |SystemType |cSystemName |ItemOneType |cItemOneName |ItemTwoType |cItemTwoName |describe |param |
 | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-| 设备编号  | 设备名称  | 主页是否显示  |设备通用配置表  |安装通用配置表  |设备逻辑配置表  |设备端口配置表  |设备图标名  |设备图例名  |设备模型名  |系统配置名  |系统名  |子类型配置名  |子类型名  |二级类型  |二级名  |设备描述  ||设备参数  |
-| 1004  | 单元梯口机  | TRUE  |Device1004  |Device1004  |Device1004  |Device1004  |Device1004  |Legend1004  |Device1004  |1  |安全技术防范系统  |3  |可视对讲系统  |2  |控制设备  |用户及管理中心可通过梯口机监视梯口，实时显示梯口的清晰影像|"传输方式：TCP/IP
-输入电源：12-24V DC                             
-工作温度：-10℃-55℃                              安装方式：壁挂式"
-  |
+| 设备编号  | 设备名称  | 主页是否显示  |设备通用配置表  |安装通用配置表  |设备逻辑配置表  |设备端口配置表  |设备图标名  |设备图例名  |设备模型名  |系统配置名  |系统名  |子类型配置名  |子类型名  |二级类型  |二级名  |设备描述  |设备参数  |
+| 1004  | 单元梯口机  | TRUE  |Device1004  |Device1004  |Device1004  |Device1004  |Device1004  |Legend1004  |Device1004  |1  |安全技术防范系统  |3  |可视对讲系统  |2  |控制设备  | fd |
   
 
 
