@@ -24,10 +24,10 @@
 > configName **string** 设备通用配置表名
 > 
 ```markdown
-  -  为当前设备创建一个通用配置json文件，configName为json文件名称，通常命名规则是 $"Device{DeviceId}"
-  -  通过编辑器工具 [根据模板生成json文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成json文件) 生成一个通用配置json文件
-  -  通用配置模板项目路径 Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json
-  -  已经创建的同名文件不会被覆盖
+  *  为当前设备创建一个通用配置json文件，configName为json文件名称，通常命名规则是 $"Device{DeviceId}"
+  *  通过编辑器工具 [根据模板生成json文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成json文件) 生成一个通用配置json文件
+  *  通用配置模板项目路径 Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json
+  *  已经创建的同名文件不会被覆盖
   
 
   {
