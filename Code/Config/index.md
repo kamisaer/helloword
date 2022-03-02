@@ -33,8 +33,14 @@
   - 
   - 通用配置模板项目路径 <u>Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json</u>
   - 
-  - 已经创建的同名文件不会被覆盖
-  
+  - 已经创建的同名文件不会被覆盖  
+  - 
+  -  json中"- -"后跟字符串会被自动替换成设备id  
+  -  
+  -  生成的json文件路径 <u>Assets/ResourceLoad/Configs/Element/Device(设备id)/Device(设备id).json</u>  
+  -  
+  -  该json文件主要用于配置设备动态加载时候需要挂载的脚本名称，也可以手动修改脚步名称，在设备实例化时候会反射加载脚步  
+  -  
 ```json
 
     {
@@ -58,31 +64,28 @@
 
 ```
 
-  -  "- -"后跟字符串会被自动替换成设备id  
-  -  
-  -  生成的json文件路径 <u>Assets/ResourceLoad/Configs/Element/Device(设备id)/Device(设备id).json</u>  
-  -  
-  -  该json文件主要用于配置设备动态加载时候需要挂载的脚本名称，也可以手动修改脚步名称，在设备实例化时候会反射加载脚步  
-  
-
 > ### installConfig **string** 设备安装配置表
-  - 根据模板创建xlsx文件 模板路径<u> Assets/ResourcePersistant/ConfigTempalte/InstallTemp.json</u>
-  
-  | bodyId  | bodyName | available |alias | connectType |correstConnect |
-| ---  | --- | --- |--- | --- |--- |
-| 1  | 底座 | TRUE | MenQJ01 | 1 | 0 |
-  
-  
+  - 根据模板创建xlsx文件 模板路径<u> Assets/ResourcePersistant/ConfigTempalte/InstallTemp.json</u>  
+  - 
   - 通过编辑器工具 [根据模板生成设备安装xlsx文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成设备安装xlsx文件) 生成设备安装xlsx文件文件  
   - 
   -  生成的xlsx路径 Assets同级下<u>ExcelTables/Install/Device(设备id).xlsx</u>  
   -  
   -  已经创建的同名文件不会被覆盖 
   -  
-
+  -   | bodyId  | bodyName | available |alias | connectType |correstConnect |
+| ---  | --- | --- |--- | --- |--- |
+| 1  | 底座 | TRUE | MenQJ01 | 1 | 0 |
 
 > ### installConfig <u>string</u> 设备安装配置表 
   - 设备逻辑配置表，用于自定义设备仿真配置
   
 > ### portConfig <u>string</u> 设备安装配置表 
   - 设备端口配置表 
+  - 
+  - 通过编辑器工具 [根据模板生成设备安装xlsx文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成设备安装xlsx文件) 生成设备安装xlsx文件文件  
+  - 
+  -  生成的xlsx路径 Assets同级下<u>ExcelTables/Install/Device(设备id).xlsx</u>  
+  -  
+  -  已经创建的同名文件不会被覆盖 
+  - 
