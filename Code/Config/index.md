@@ -18,7 +18,7 @@
 | 1004  | 单元梯口机  | TRUE  |Device1004  |Device1004  |Device1004  |Device1004  |Device1004  |Legend1004  |Device1004  |1  |安全技术防范系统  |3  |可视对讲系统  |2  |控制设备  | 可视室内机对讲系统的终端设备，具有可视对讲、安防监控、信息接受和查阅等功能 |传输方式：TCP/IP 输入电源：12-24V DC 工作温度：-10℃-55℃ 安装方式：壁挂式  |
 
 字段解释:
-> DeviceId **int** 设备唯一id
+> DeviceId <u>**int**</u> 设备唯一id
 > cDeviceName **string**  设备中文名称
 > Enable **bool**  控制是否在设备库界面上显示
 > configName **string** 设备通用配置表名
@@ -49,7 +49,7 @@
       ]
 }
 
--  --后跟字符串会被自动替换成设备id
+-  "--"后跟字符串会被自动替换成设备id
 -  生成的json文件路径 Assets/ResourceLoad/Configs/Element/Device(设备id)/Device(设备id).json
 -  该json文件主要用于配置设备动态加载时候需要挂载的脚本名称，也可以手动修改脚步名称，在设备实例化时候会反射加载脚步
 ```
