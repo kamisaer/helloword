@@ -90,9 +90,12 @@
 
 ## 2.内部工具
 
-> #### [1. excel2json](#excel2json)  
-> #### [2. 编辑器UIGenarator](#编辑器工具uigenarator)  
-> #### [3. 编辑器WebGLSetting](#编辑器工具webglsetting)
+> ### [1. excel2json](#excel2json)  
+> ### [2. 根据模板生成json文件](#根据模板生成json文件)  
+> ### [3. 根据模板生成设备安装xlsx文件](#根据模板生成设备安装xlsx文件)  
+> ### [4. 根据模板生成设备端子xlsx文件](#根据模板生成设备端子xlsx文件)  
+> ### [5. 编辑器UIGenarator](#编辑器工具uigenarator)  
+> ### [6. 编辑器WebGLSetting](#编辑器工具webglsetting)
 
 
 
@@ -102,6 +105,18 @@
 
 >[MenuItem("CubeSpace/ExcelDataTable/(所有excel文件转json)Excel2Cs2Json")]
   - 调用.bat批处理excel文件转.json文件
+  
+#### 根据模板生成json文件
+>[MenuItem("CubeSpace/ConfigGenarator/xlsxtojson")]
+  - 根据json模板生成一个新的json文件，并在新文件中对部分字段内容进行替换
+  - 
+#### 根据模板生成设备安装xlsx文件
+>[MenuItem("CubeSpace/ConfigGenarator/(创建 Devices Instanll 设备库安装xlsx文件)")]
+  - 根据xlsx模板生成一个新的xlsx文件，并在新文件中对部分字段内容进行替换
+
+#### 根据模板生成设备端子xlsx文件
+>[MenuItem("CubeSpace/ConfigGenarator/(创建 Devices Ports 设备库端子xlsx文件)")]
+  - 根据xlsx模板生成一个新的xlsx文件，并在新文件中对部分字段内容进行替换
 
 #### 编辑器工具UIGenarator
 
