@@ -7,7 +7,8 @@
 > 使用Excel存储静态数据  配置表存放路径 Assets同级 ExcelTables/
 
 > ExcelTables/Device:  存放设备资源库数据
-  - GroupData.xlsx:  所有设备数据
+  - GroupData.xlsx:  所有设备数据  
+  - 
   - DeviceClassification.xlsx: 设备的类型分配
 
 
@@ -27,11 +28,8 @@
 
 > ### configName <u>string</u> 设备通用配置表名
   - 为当前设备创建一个通用配置json文件，configName为json文件名称，通常命名规则是 $"Device{DeviceId}"  
-  
   - 通过编辑器工具 [根据模板生成json文件](https://kamisaer.github.io/helloword/Tool/#根据模板生成json文件) 生成一个通用配置json文件
-  
   - 通用配置模板项目路径 <u>Assets/ResourcePersistant/ConfigTempalte/DeviceTemp.json</u>
-  
   - 已经创建的同名文件不会被覆盖
   
 ```json
