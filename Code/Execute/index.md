@@ -80,6 +80,10 @@ public void OnStart() {
     MainProcess.Instance.OnInitialize();
 }
 ```
+> 在主状态S <u>StatePreload</u> 对json文件进行预加载
+> 预加载完成后开始加载场景
+> 加载场景完成进入初始化状态机 <u>StateOnInit<u>
+> 在<u>StateOnInit<u>中开始预加载部分UI和显示主体UI
 
 
 ## 2.内部模块
