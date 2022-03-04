@@ -3,10 +3,11 @@
 ![img](图1.png)
 
 > UI数据来源 GroupData.json
-> 对所有设备数据进行3级筛选分类 类型从大到小分别为
-> [一](https://kamisaer.github.io/helloword/Code/Config/#systemtype-systemtype-系统类型)
-> [二](https://kamisaer.github.io/helloword/Code/Config/#itemonetype-itemonetype-子类型配置名)
-> [三](https://kamisaer.github.io/helloword/Code/Config/#itemtwotype-itemtwotype-二级类型配置名)
+> 对所有设备数据进行3级筛选分类 类型从大到小分别为  
+> ---
+> [大系统分类](https://kamisaer.github.io/helloword/Code/Config/#systemtype-systemtype-系统类型)
+> [二级分类](https://kamisaer.github.io/helloword/Code/Config/#itemonetype-itemonetype-子类型配置名)
+> [三级分类](https://kamisaer.github.io/helloword/Code/Config/#itemtwotype-itemtwotype-二级类型配置名)
 
 ## 脚步参考: ElementLib.cs
 
