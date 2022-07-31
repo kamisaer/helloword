@@ -1,6 +1,6 @@
 # Welcome 
 
-
+[!https://mermaid-js.github.io/mermaid/#/n00b-syntaxReference?id=syntax-structure]
 
 ```mermaid
   graph TD;
